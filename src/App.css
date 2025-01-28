@@ -25,9 +25,7 @@ body {
 }
 
 .main-content {
-  max-width: 100%;
   padding: 2rem;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -97,7 +95,7 @@ body {
 }
 
 .app-header p {
-  color: var(--text-color);
+  color: var(--ali-orange-light);
   font-size: 1.1rem;
   margin-top: 0.5rem;
 }
@@ -233,5 +231,5 @@ body {
 .explanation p {
   margin: 0 0 1rem;
   line-height: 1.6;
-  color: var(--ali-orange-light);
+  color: var(--text-color);
 }
