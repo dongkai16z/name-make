@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { generateName, synthesizeSpeech } from './services/api'
+import { generateName } from './services/api'
 
 function App() {
   const [name, setName] = useState('')
@@ -29,19 +29,6 @@ function App() {
       alert(error instanceof Error ? error.message : '生成失败，请稍后重试');
     } finally {
       setIsLoading(false);
-    }
-  }
-
-  const handlePlayName = async (text: string) => {
-    try {
-      const audioData = await synthesizeSpeech(text);
-      const blob = new Blob([audioData], { type: 'audio/mp3' });
-      const url = URL.createObjectURL(blob);
-      const audio = new Audio(url);
-      await audio.play();
-      URL.revokeObjectURL(url);
-    } catch (error) {
-      alert(error instanceof Error ? error.message : '播放失败，请稍后重试');
     }
   }
 
