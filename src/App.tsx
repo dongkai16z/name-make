@@ -89,13 +89,13 @@ function App() {
             <div key={index} className="name-card">
               <h2>
                 {item.name}
-                <button 
+                {/* <button 
                   onClick={() => handlePlayName(item.name)}
                   className="play-btn"
                   title="播放发音"
                 >
                   🔊
-                </button>
+                </button> */}
               </h2>
               <div className="explanation">
                 <h3>单字解释</h3>
